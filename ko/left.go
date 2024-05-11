@@ -1,6 +1,6 @@
 package ko
 
-var left = [...]string{
+var left = [...]string{ //nolint:gochecknoglobals // left is a global variable
 	"가까운",
 	"가능한",
 	"가득한",
@@ -152,7 +152,7 @@ var left = [...]string{
 	"맑은",
 	"망자의",
 	"매력적",
-	"맵시​​있는",
+	"맵시있는",
 	"맹렬한",
 	"멋있는",
 	"멋진",
