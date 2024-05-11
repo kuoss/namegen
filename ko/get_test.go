@@ -1,4 +1,4 @@
-package en
+package ko
 
 import (
 	"regexp"
@@ -9,10 +9,10 @@ import (
 )
 
 var (
-	wantLeftMinLen  = 3
-	wantLeftMaxLen  = 13
-	wantRightMinLen = 2
-	wantRightMaxLen = 13
+	wantLeftMinLen  = 1
+	wantLeftMaxLen  = 6
+	wantRightMinLen = 1
+	wantRightMaxLen = 5
 )
 
 func TestLeft(t *testing.T) {
@@ -52,9 +52,10 @@ func TestGet(t *testing.T) {
 		sep         string
 		wantPattern string
 	}{
-		{"", "[a-z]{3,13}[a-z]{2,13}"},
-		{"-", "[a-z]{3,13}-[a-z]{2,13}"},
-		{"_", "[a-z]{3,13}_[a-z]{2,13}"},
+		{"", "[가-힣]{1,6}[가-힣]{1,5}"},
+		{"-", "[가-힣]{1,6}-[가-힣]{1,5}"},
+		{"_", "[가-힣]{1,6}_[가-힣]{1,5}"},
+		{"hello", "[가-힣]{1,6}hello[가-힣]{1,5}"},
 	}
 	for _, tc := range testCases {
 		t.Run("", func(t *testing.T) {
