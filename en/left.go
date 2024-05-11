@@ -1,7 +1,7 @@
 package en
 
 // https://github.com/moby/moby/blob/v26.1.2/pkg/namesgenerator/names-generator.go#20
-var left = [...]string{
+var left = [...]string{ //nolint:gochecknoglobals // left is a global variable
 	"admiring",
 	"adoring",
 	"affectionate",

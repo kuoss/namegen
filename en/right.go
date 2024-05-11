@@ -1,7 +1,7 @@
 package en
 
 // https://github.com/moby/moby/blob/v26.1.2/pkg/namesgenerator/names-generator.go#L133
-var right = [...]string{
+var right = [...]string{ //nolint:gochecknoglobals // right is a global variable
 	// Maria Gaetana Agnesi - Italian mathematician, philosopher, theologian and humanitarian. She was the first woman to write a mathematics handbook and the first woman appointed as a Mathematics Professor at a University. https://en.wikipedia.org/wiki/Maria_Gaetana_Agnesi
 	"agnesi",
 
